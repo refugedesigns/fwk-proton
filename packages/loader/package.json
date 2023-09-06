@@ -1,0 +1,29 @@
+{
+  "name": "fwk-proton-loader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/fwk-proton.js",
+  "files": [
+    "dist/fwk-proton.js"
+  ],
+  "scripts": {
+    "prepack": "npm run build",
+    "build": "rollup -c",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "test": "vitest",
+    "test:run": "vitest run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.48.0",
+    "jsdom": "^22.1.0",
+    "rollup": "^3.29.0",
+    "rollup-plugin-cleanup": "^3.2.1",
+    "rollup-plugin-file": "^0.1.1",
+    "rollup-plugin-filesize": "^10.0.0",
+    "vitest": "^0.34.3"
+  }
+}
