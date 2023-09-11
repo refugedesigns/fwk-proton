@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My TODOs</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="todo.js"></script>
+
+    <style>
+      body {
+        font-family: roboto, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      label {
+        display: inline-block;
+        width: 100%;
+        padding: 5px 0;
+        margin: 0 auto;
+      }
+
+      div:first-child {
+        background-color: green;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #todo-input {
+        padding: 10px;
+      }
+
+      button {
+        padding: 10px 24px;
+        cursor: pointer;
+        background-color: #32de84;
+        color: white;
+        border: 1px solid black;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+      }
+
+      button:disabled {
+        background-color: #87a96b;
+      }
+
+      button:enabled {
+        background-color: #32de84;
+      }
+
+      #cancel-btn {
+        background-color: #fd5c63;
+        padding: 5px;
+      }
+
+      #done-btn {
+        padding: 5px;
+      }
+
+      #save-btn {
+        padding: 5px;
+      }
+
+      ul {
+        list-style-type: none;
+        list-style: none;
+        width: 40%;
+      }
+
+      ul li {
+        background-color: #00538c;
+        display: inline-block;
+        width: auto;
+        margin: 8px 0;
+        padding: 0 5px 0px 0px;
+        border-radius: 4px;
+        color: #fff;
+      }
+
+      li span {
+        margin: 0 16px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>My TODOs</h1>
+    <div>
+      <label for="todo-input">New TODO</label>
+      <div>
+        <input type="text" id="todo-input" />
+        <button id="add-todo-btn" disabled>Add</button>
+      </div>
+    </div>
+    <ul id="todos-list"></ul>
+  </body>
+</html>
